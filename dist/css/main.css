@@ -1,0 +1,428 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+/* 0. Reset ================================= */
+/* 
+If you want to add partials, use Sass Modules via @use:
+@use 'variables';
+
+Usage: partial-name.variable/mixin/function-name:
+background: variables.$primary-color;
+*/
+/* 1. Main Layout ================================= */
+* {
+	box-sizing: border-box;
+}
+* h1 {
+	font-family: "Juventus Fans Bold";
+}
+* h2 {
+	font-family: "Juventus Fans Bold";
+}
+* h3 {
+	font-family: "Juventus Fans Bold";
+}
+* p {
+	font-family: "Roboto", sans-serif;
+}
+* a {
+	font-family: sans-serif;
+}
+
+body {
+	background: #f8f8f8;
+}
+
+/* 2. Content ================================= */
+.shop-now {
+	font-size: 20px;
+	text-transform: uppercase;
+	color: white;
+	border: none;
+	padding: 10px 30px;
+	margin-bottom: 30px;
+	background-color: #ff2850;
+	font-family: "Juventus Fans Bold";
+	transition: 0.5s;
+}
+.shop-now a {
+	font-family: "Juventus Fans Bold";
+	text-decoration: none;
+	color: white;
+}
+
+.shop-now:hover {
+	-webkit-transform: scale(1.1);
+	        transform: scale(1.1);
+}
+
+.nav {
+	display: flex;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.nav .hamburger {
+	margin-left: 20px;
+}
+.nav .hamburger .bar {
+	width: 20px;
+	height: 3px;
+	background-color: black;
+	margin-top: 3px;
+	border-radius: 2px;
+}
+.nav .links {
+	display: none;
+}
+.nav .logo {
+	width: 20px;
+	align-self: center;
+	margin-left: 20px;
+}
+.nav h1 {
+	padding-left: 20px;
+	align-items: flex-end;
+}
+
+.hero {
+	width: 100%;
+	height: 600px;
+	position: relative;
+	background-image: url(/dist/img/hero-img.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+@media screen and (min-width: 800px) {
+	.hero {
+		background-position: 50% 20%;
+	}
+}
+.hero .hero__copy {
+	position: absolute;
+	bottom: 30px;
+	text-align: center;
+	left: 5%;
+	right: 5%;
+}
+.hero .hero__copy h2 {
+	font-size: 50px;
+	color: white;
+	padding-bottom: 10px;
+}
+.hero .hero__copy p {
+	font-size: 20px;
+	color: white;
+	padding-bottom: 20px;
+}
+.hero .hero__copy p .usa {
+	text-transform: uppercase;
+}
+
+.hero-description .hero-colums {
+	display: flex;
+	flex-direction: column;
+	text-align: -webkit-center;
+	margin: 20px 0px;
+}
+@media screen and (min-width: 800px) {
+	.hero-description .hero-colums {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
+.hero-description .hero-colums .colums-details h2 {
+	font-size: 22px;
+	padding-bottom: 16px;
+}
+.hero-description .hero-colums .colums-details p {
+	font-size: 16px;
+	padding-bottom: 20px;
+}
+.hero-description .hero-colums .colums-details .bottom-bar {
+	width: 30%;
+	height: 2px;
+	background-color: grey;
+	margin: 30px 0px;
+	opacity: 0.5;
+	display: block;
+}
+@media screen and (min-width: 800px) {
+	.hero-description .hero-colums .colums-details .bottom-bar {
+		display: none;
+	}
+}
+
+.shop-sections .shop-grid {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 50px;
+}
+@media screen and (min-width: 800px) {
+	.shop-sections .shop-grid {
+		display: grid;
+		grid-template-columns: 35% 35%;
+		justify-content: center;
+	}
+}
+.shop-sections .shop-grid .shop-boxes {
+	background-color: white;
+	position: relative;
+}
+.shop-sections .shop-grid .shop-boxes img {
+	width: 100%;
+}
+@media screen and (min-width: 800px) {
+	.shop-sections .shop-grid .shop-boxes img {
+		width: 100%;
+	}
+}
+.shop-sections .shop-grid .shop-boxes .shop-description {
+	margin-left: 20px;
+}
+.shop-sections .shop-grid .shop-boxes .shop-description h3 {
+	font-size: 28px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+}
+.shop-sections .shop-grid .shop-boxes .shop-description p {
+	font-size: 18px;
+	padding-bottom: 20px;
+	font-family: "Juventus Fans Bold";
+	text-transform: uppercase;
+	color: rgb(37, 34, 34);
+}
+.shop-sections .shop-grid .shop-boxes .boxes {
+	position: absolute;
+	bottom: -20px;
+	background-color: #ffffff;
+	width: 90%;
+	padding: 10px 20px;
+	border: none;
+	z-index: 2;
+}
+
+.select-player {
+	text-align: center;
+	margin-bottom: 20px;
+	flex-direction: column;
+}
+@media screen and (min-width: 800px) {
+	.select-player {
+		display: flex;
+		flex-direction: row;
+		gap: 5px;
+	}
+}
+.select-player img {
+	width: 100%;
+}
+@media screen and (min-width: 800px) {
+	.select-player img {
+		width: 55%;
+	}
+}
+.select-player input {
+	margin-top: 20px;
+	padding: 10px 20px;
+	width: 70%;
+	border: none;
+	background-color: #fffffb;
+	border-bottom: 1px solid grey;
+	font-family: "Juventus Fans Bold";
+}
+@media screen and (min-width: 800px) {
+	.select-player input {
+		height: 60px;
+		align-self: center;
+		width: 20%;
+	}
+}
+
+footer {
+	background-color: black;
+}
+@media screen and (min-width: 800px) {
+	footer .links {
+		display: flex;
+		justify-content: center;
+	}
+}
+footer .links .logo-white {
+	margin: 50px 40px;
+	width: 10%;
+}
+@media screen and (min-width: 800px) {
+	footer .links .logo-white {
+		width: 5%;
+		align-self: flex-start;
+	}
+}
+footer .links .column {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 40px;
+	gap: 40px;
+}
+@media screen and (min-width: 800px) {
+	footer .links .column .list {
+		margin: 40px 20px;
+	}
+}
+footer .links .column .list li {
+	color: white;
+	opacity: 0.5;
+	padding-bottom: 30px;
+	font-size: 14px;
+	font-family: "Juventus Fans Bold";
+}
+footer .links .column .list .title {
+	opacity: 1;
+}
+/*# sourceMappingURL=main.css.map */

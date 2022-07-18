@@ -1,0 +1,302 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+
+/* 0. Reset ================================= */
+
+/* 
+If you want to add partials, use Sass Modules via @use:
+@use 'variables';
+
+Usage: partial-name.variable/mixin/function-name:
+background: variables.$primary-color;
+*/
+
+@use 'reset';
+@use 'mixins';
+// @import url(//db.onlinewebfonts.com/c/b4ccc98add6cc60de17dbb589dca2164?family=Juventus+Fans+Bold);
+// font-family: 'Roboto', sans-serif;
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+	h1{
+		font-family:"Juventus Fans Bold";
+	}
+	h2{
+		font-family:"Juventus Fans Bold";
+	}
+	h3{
+		font-family:"Juventus Fans Bold";
+	}
+	p{
+		font-family: 'Roboto', sans-serif;
+	}
+	a{
+		font-family: sans-serif;
+	}
+}
+
+body {
+	background: #f8f8f8;
+}
+
+/* 2. Content ================================= */
+.shop-now{
+	font-size: 20px;
+	text-transform: uppercase;
+	color: white;
+	border: none;
+	padding: 10px 30px;
+	margin-bottom: 30px;
+	background-color: #ff2850;
+	font-family: "Juventus Fans Bold";
+	transition: .5s;
+	a{
+		font-family: "Juventus Fans Bold";
+		text-decoration: none;
+		color: white;
+	}
+}
+.shop-now:hover{
+	transform: scale(1.1);
+}
+.nav{
+	display: flex;
+	margin-top: 20px;
+	// text-align: center;
+	margin-bottom: 20px;
+	
+
+	.hamburger{
+		margin-left: 20px;
+		// margin-top: 10px;
+		.bar{
+			width: 20px;
+			height: 3px;
+			background-color: black;
+			margin-top: 3px;
+			border-radius: 2px;
+		}
+	}
+
+	.links{
+		display: none;
+	}
+
+	.logo{
+		width: 20px;
+		align-self: center;
+		margin-left: 20px;
+	}
+
+	h1{
+		padding-left: 20px;
+		align-items: flex-end;
+	}
+}
+
+.hero{
+	width: 100%;
+	height: 600px;
+	position: relative;
+	background-image: url(/dist/img/hero-img.jpg);
+	// background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5), url(/dist/img/hero-img.jpg));
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	@include mixins.bp-large{
+		background-position: 50% 20%;
+		
+	}
+	.hero__copy{
+		position: absolute;
+		bottom: 30px;
+		text-align: center;
+		left: 5%;
+		right: 5%;
+		h2{
+			font-size: 50px;
+			color: white;
+			padding-bottom: 10px;
+		}
+		p{
+			font-size: 20px;
+			color: white;
+			padding-bottom: 20px;
+			.usa{
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+.hero-description{
+	.hero-colums{
+		display: flex;
+		flex-direction: column;
+		text-align: -webkit-center;
+		margin: 20px 0px;
+		@include mixins.bp-large{
+			flex-direction: row;
+			justify-content: space-around;
+		}
+		.colums-details{
+			h2{
+				font-size: 22px;
+				padding-bottom: 16px;
+			}
+			p{
+				font-size: 16px;
+				padding-bottom: 20px;
+				// border-bottom: 1px solid;
+			}
+			.bottom-bar{
+				width: 30%;
+				height: 2px;
+				background-color: grey;
+				margin: 30px 0px;
+				opacity: .5;
+				display: block;
+				@include mixins.bp-large{
+					display: none;
+
+				}
+			}
+		}
+	}
+}
+
+.shop-sections{
+	.shop-grid{
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 50px;
+		@include mixins.bp-large{
+			display: grid;
+			grid-template-columns: 35% 35%;
+			justify-content: center;
+		}
+		.shop-boxes{
+			background-color: white;
+			position: relative;
+		
+			img{
+				width: 100%;
+				@include mixins.bp-large{
+					width: 100%;
+				}
+			}
+			.shop-description{
+				margin-left: 20px;
+				h3{
+					font-size: 28px;
+					padding-bottom: 10px;
+					text-transform: uppercase;
+				}
+				p{
+					font-size: 18px;
+					padding-bottom: 20px;
+					font-family: "Juventus Fans Bold";
+					text-transform: uppercase;
+					color: rgb(37, 34, 34);
+				}
+			}
+			.boxes{
+				position: absolute;
+				bottom: -20px;
+				background-color: #ffffff;
+				width: 90%;
+				padding: 10px 20px;
+				border: none;
+				z-index: 2;
+			}
+		}
+	}
+}
+
+
+.select-player{
+	text-align: center;
+	margin-bottom: 20px;
+	flex-direction: column;
+	@include mixins.bp-large{
+		display: flex;
+		flex-direction: row;
+		gap: 5px;
+
+	}
+	img{
+		width: 100%;
+		@include mixins.bp-large{
+			width: 55%;
+
+		}
+	}
+	input{
+		margin-top: 20px;
+		padding: 10px 20px;
+		width: 70%;
+		border: none;
+		background-color: #fffffb;
+		border-bottom: 1px solid grey;
+		font-family:"Juventus Fans Bold";
+		@include mixins.bp-large{
+			height: 60px;
+			align-self: center;
+			width: 20%;
+
+		}
+	}
+}
+
+footer{
+	background-color: black;
+	.links{
+		@include mixins.bp-large{
+			display: flex;
+			justify-content: center;
+		}
+		.logo-white{
+			margin: 50px 40px;
+			width: 10%;
+			@include mixins.bp-large{
+				width: 5%;
+				align-self: flex-start;
+			}
+		}
+		.column{
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: 40px;
+			gap: 40px;
+			.list{
+				@include mixins.bp-large{
+					margin: 40px 20px;
+				}
+				li{
+					color: white;
+					opacity: .5;
+					padding-bottom: 30px;
+					font-size: 14px;
+					font-family:"Juventus Fans Bold";
+				}
+				.title{
+					opacity: 1;
+				}
+			}
+			
+		}
+	}
+}
