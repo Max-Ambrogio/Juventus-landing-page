@@ -202,6 +202,32 @@ body {
 	        transform: scale(1.1);
 }
 
+.shop-now-white {
+	font-size: 20px;
+	text-transform: uppercase;
+	color: white;
+	border: none;
+	padding: 10px 9px;
+	margin-bottom: 30px;
+	background-color: #ffffff;
+	font-family: "Juventus Fans Bold";
+	transition: 0.5s;
+	border: 1px solid #ff2850;
+}
+.shop-now-white a {
+	font-family: "Juventus Fans Bold";
+	text-decoration: none;
+	color: #ff2850;
+}
+.shop-now-white img {
+	width: 16px;
+}
+
+.shop-now-white:hover {
+	-webkit-transform: scale(1.1);
+	        transform: scale(1.1);
+}
+
 .nav {
 	display: flex;
 	margin-top: 20px;
@@ -385,6 +411,243 @@ body {
 	}
 }
 
+.product-links {
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.product-links ul {
+	display: flex;
+}
+.product-links ul li {
+	padding-right: 2px;
+	padding-bottom: 30px;
+}
+.product-links ul li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: rgb(53, 53, 53);
+	font-family: "Juventus Fans Bold";
+	font-size: 16px;
+}
+
+.red-emphasis {
+	color: red;
+}
+
+.product {
+	display: flex;
+	flex-direction: column;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+@media screen and (min-width: 800px) {
+	.product {
+		flex-direction: row;
+	}
+}
+.product .product__images {
+	padding-bottom: 30px;
+}
+.product .product__images img {
+	width: 100%;
+}
+.product .product__images .small-images {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+.product .product__images .small-images img {
+	width: 15%;
+}
+.product .product__description {
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.product .product__description .product__info {
+	border-bottom: 1px solid #636363;
+	padding-bottom: 22px;
+}
+.product .product__description .product__info h1 {
+	font-size: 32px;
+	padding-bottom: 20px;
+}
+.product .product__description .product__info p {
+	font-size: 16px;
+	line-height: 26px;
+	color: #636363;
+}
+.product .product__description .product__sizes {
+	padding-top: 22px;
+	border-bottom: 1px solid #636363;
+}
+.product .product__description .product__sizes h2 {
+	font-size: 18px;
+	padding-bottom: 22px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 600;
+}
+.product .product__description .product__sizes .size-boxes .size-links {
+	display: flex;
+	justify-content: space-between;
+	font-size: 22px;
+	text-transform: uppercase;
+	padding-bottom: 15px;
+}
+.product .product__description .product__sizes .size-boxes .size-links a {
+	font-family: "Juventus Fans Bold";
+	font-size: 16px;
+	color: black;
+	align-self: flex-end;
+}
+.product .product__description .product__sizes .size-boxes ul {
+	display: flex;
+	gap: 5px;
+	padding-bottom: 15px;
+}
+.product .product__description .product__sizes .size-boxes ul li {
+	font-size: 16px;
+	padding: 10px 10px;
+	border: 1px solid black;
+	text-transform: uppercase;
+}
+.product .product__description .product__sizes .size-boxes ul li a {
+	color: grey;
+	text-decoration: none;
+	font-family: "Juventus Fans Bold";
+}
+.product .product__description .product__quantity {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 34px;
+	padding-bottom: 34px;
+	border-bottom: 1px solid #636363;
+}
+.product .product__description .product__quantity h3 {
+	font-size: 22px;
+}
+.product .product__description .product__quantity select {
+	background-color: #f6f6f6;
+	width: 55px;
+	padding: 10px;
+	border: none;
+	border-bottom: 1px solid #999898;
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+}
+.product .product__description .product__price {
+	padding-top: 34px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #636363;
+}
+.product .product__description .product__price h3 {
+	font-size: 22px;
+	padding-bottom: 15px;
+	text-transform: uppercase;
+}
+.product .product__description .product__price .price {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 20px;
+}
+.product .product__description .product__price .price h4 {
+	font-size: 32px;
+	font-family: "Juventus Fans Bold";
+}
+.product .product__description .product__price .price p {
+	font-family: "Juventus Fans Bold";
+	font-size: 22px;
+	text-transform: uppercase;
+}
+.product .product__description .product__price .price p a {
+	font-family: "Juventus Fans Bold";
+	padding-right: 20px;
+	font-size: 16px;
+	color: black;
+}
+.product .product__description .product__price .purchase {
+	display: flex;
+	flex-direction: column;
+	width: 36%;
+}
+@media screen and (min-width: 800px) {
+	.product .product__description .product__price .purchase {
+		width: 50%;
+	}
+}
+
+.related__product {
+	margin-left: 2%;
+	margin-right: 2%;
+	border-bottom: 1px solid #636363;
+}
+@media screen and (min-width: 800px) {
+	.related__product {
+		border-bottom: 0px;
+	}
+}
+.related__product h2 {
+	font-size: 30px;
+	padding-top: 20px;
+	padding-bottom: 14px;
+}
+.related__product .related__product--images {
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+	gap: 5px;
+}
+.related__product .related__product--images img {
+	width: 40%;
+	transition: 500ms;
+}
+.related__product .related__product--images img:hover {
+	-webkit-transform: scale(1.1);
+	        transform: scale(1.1);
+}
+
+.contact {
+	padding-top: 20px;
+	padding-bottom: 30px;
+	margin-left: 2%;
+	margin-right: 2%;
+	display: flex;
+	flex-direction: column;
+}
+.contact h2 {
+	font-size: 30px;
+	padding-bottom: 20px;
+}
+.contact fieldset {
+	align-self: center;
+}
+.contact fieldset p {
+	font-family: "Juventus Fans Bold";
+	font-size: 24px;
+	padding-bottom: 20px;
+}
+.contact fieldset legend {
+	font-family: "Juventus Fans Bold";
+}
+.contact fieldset .input {
+	font-family: "Juventus Fans Bold";
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 22px;
+}
+.contact fieldset .input label {
+	padding-right: 15px;
+}
+.contact fieldset .input input {
+	border: none;
+	border-bottom: 1px solid #636363;
+}
+.contact fieldset .shop-now {
+	margin-top: 20px;
+	cursor: pointer;
+}
+
 footer {
 	background-color: black;
 }
@@ -421,6 +684,11 @@ footer .links .column .list li {
 	padding-bottom: 30px;
 	font-size: 14px;
 	font-family: "Juventus Fans Bold";
+}
+footer .links .column .list li a {
+	font-family: "Juventus Fans Bold";
+	text-decoration: none;
+	color: white;
 }
 footer .links .column .list .title {
 	opacity: 1;
