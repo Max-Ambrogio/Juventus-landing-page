@@ -512,9 +512,12 @@ body {
 	text-transform: uppercase;
 }
 .product .product__description .product__sizes .size-boxes ul li a {
-	color: grey;
+	color: #636363;
 	text-decoration: none;
 	font-family: "Juventus Fans Bold";
+}
+.product .product__description .product__sizes .size-boxes ul li:hover {
+	border: 1px solid #ff2850;
 }
 .product .product__description .product__quantity {
 	display: flex;

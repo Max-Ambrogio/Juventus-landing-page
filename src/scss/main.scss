@@ -47,6 +47,7 @@ background: variables.$primary-color;
 	a{
 		font-family: sans-serif;
 	}
+	//#AD0000 red
 }
 
 body {
@@ -378,11 +379,14 @@ body {
 						border: 1px solid black;
 						text-transform: uppercase;
 						a{
-							color: grey;
+							color: #636363;
 							text-decoration: none;
 							font-family:"Juventus Fans Bold";
 						}
 						
+					}
+					li:hover{
+						border: 1px solid #ff2850;
 					}
 				}
 			}
