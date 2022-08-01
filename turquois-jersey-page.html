@@ -13,33 +13,49 @@
 	</head>
 
 	<body>
-		<header class="nav">
-			<div class="hamburger">
-				<div class="hamburger-bars">
-					<div class="bar"></div>
-					<div class="bar"></div>
-					<div class="bar"></div>
-				</div>
-				
-				<ul class="links">
-					<li><a href="">Match Kits</a></li>
-					<li><a href="">Training</a></li>
-					<li><a href="">New In</a></li>
-					<li><a href="">Apparel</a></li>
-					<li><a href="">Accessories</a></li>
-					<li><a href="">Gift Ideas</a></li>
-					<li><a href="">Shop by Player</a></li>
-					<li><a href="">Sale</a></li>
-					<li><img src="" alt="shop-icon"></li>
-				</ul>
-			</div>
+        <header class="nav">
+            <div class="upper-nav">
+                <div class="hamburger">
+                    <div class="hamburger-bars">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    
+                    <ul class="links-hamburger">
+                        <li><a href="">Match Kits</a></li>
+                        <li><a href="">Training</a></li>
+                        <li><a href="">New In</a></li>
+                        <li><a href="">Apparel</a></li>
+                        <li><a href="">Accessories</a></li>
+                        <li><a href="">Gift Ideas</a></li>
+                        <li><a href="">Shop by Player</a></li>
+                        <li><a href="">Sale</a></li>
+                        <li><img src="" alt="shop-icon"></li>
+                    </ul>
+                </div>
 
-			<img class="logo" src="dist/img/logo-j.svg" alt="Juventus Logo">
+                <img class="logo" src="dist/img/logo-j.svg" alt="Juventus Logo">
+
+                <h1>Juventus Official Online Store</h1>
+            </div>
+
+            <ul class="links">
+                <li><a href="matchkits-options-page.html">Match Kits</a></li>
+                <li><a href="">Training</a></li>
+                <li><a href="">New In</a></li>
+                <li><a href="">Apparel</a></li>
+                <li><a href="">Accessories</a></li>
+                <li><a href="">Gift Ideas</a></li>
+                <li><a href="">Shop by Player</a></li>
+                <li><a href="">Sale</a></li>
+            </ul>
 
 		</header>
+
         <div class="product-links">
             <ul>
-                <li><a href="">Home / </a></li>
+                <li><a href="index.html">Home / </a></li>
                 <li><a href="">Training / </a></li>
                 <li><a href="">Juventus Turquoise Training Jersey 2022/23</a></li>
             </ul>
@@ -107,12 +123,13 @@
                             <p><a href="">Change Currency</a><span class="red-emphasis">50,95 Usd</span></p>
                         </div>
                         <div class="purchase">
-                            <button class="shop-now">
-                                <a href="">Add to Bag</a>
-                            </button>
-                            <button class="shop-now-white">
-                                <a href="">Add to Wishlist <img src="./dist/img/heart-outline.ico" alt="heart"></a>
-                            </button>
+                            <a class="shop-now">
+                                Add to Bag
+                            </a>
+                            <a class="shop-now-white">
+                                Add to Wishlist
+                                <img src="./dist/img/heart-outline.ico" alt="heart"></a>
+                            </a>
                         </div>
                     </section>
                 </section>
@@ -157,9 +174,7 @@
 
                         <input type="tel" id="phone" name="phone"
                             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                            required>
-
-                        <small>Format: 123-456-7890</small>
+                            required placeholder="123-456-7890">
                     </div>
                     <input class="shop-now" type="submit" value="Submit Request">
                 </fieldset>

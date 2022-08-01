@@ -63,13 +63,11 @@ body {
 	padding: 10px 30px;
 	margin-bottom: 30px;
 	background-color: #ff2850;
-	font-family: "Juventus Fans Bold";
 	transition: .5s;
-	a{
-		font-family: "Juventus Fans Bold";
-		text-decoration: none;
-		color: white;
-	}
+	font-family: "Juventus Fans Bold";
+	text-decoration: none;
+	color: white;
+
 }
 .shop-now:hover{
 	transform: scale(1.1);
@@ -85,11 +83,10 @@ body {
 	font-family: "Juventus Fans Bold";
 	transition: .5s;
 	border: 1px solid #ff2850;
-	a{
-		font-family: "Juventus Fans Bold";
-		text-decoration: none;
-		color: #ff2850;
-	}
+	font-family: "Juventus Fans Bold";
+	text-decoration: none;
+	color: #ff2850;
+
 	img{
 		width: 16px;
 	}
@@ -98,38 +95,67 @@ body {
 	transform: scale(1.1);
 }
 .nav{
-	display: flex;
-	margin-top: 20px;
-	// text-align: center;
-	margin-bottom: 20px;
+	@include mixins.bp-large{
+		border-bottom: 2px solid rgba(51, 51, 51, 0.286);
+		background-position: 50% 20%;
+	}
+	.upper-nav{
+		display: flex;
+		margin-top: 20px;
+		// text-align: center;
+		padding-bottom: 30px;
+		margin-bottom: 20px;
+		border-bottom:2px solid rgba(51, 51, 51, 0.286) ;
+		
 	
-
-	.hamburger{
-		margin-left: 20px;
-		// margin-top: 10px;
-		.bar{
+		.hamburger{
+			margin-left: 20px;
+			// margin-top: 10px;
+			.bar{
+				width: 20px;
+				height: 3px;
+				background-color: black;
+				margin-top: 3px;
+				border-radius: 2px;
+			}
+		}
+	
+		.links-hamburger{
+			display: none;
+		}
+	
+		.logo{
 			width: 20px;
-			height: 3px;
-			background-color: black;
-			margin-top: 3px;
-			border-radius: 2px;
+			align-self: center;
+			margin-left: 20px;
+		}
+	
+		h1{
+			padding-left: 20px;
+			align-items: flex-end;
 		}
 	}
 
 	.links{
 		display: none;
+		margin: 30px 50px 20px 50px;
+		padding-bottom: 10px;
+		@include mixins.bp-large{
+			display: flex;
+			justify-content: space-around;
+		}
+		li{
+			a{
+				text-decoration: none;
+				color: black;
+				font-family: "Juventus Fans Bold";
+			}
+			a:hover{
+				color: red;
+			}
+		}
 	}
 
-	.logo{
-		width: 20px;
-		align-self: center;
-		margin-left: 20px;
-	}
-
-	h1{
-		padding-left: 20px;
-		align-items: flex-end;
-	}
 }
 
 .hero{
@@ -159,11 +185,12 @@ body {
 		p{
 			font-size: 20px;
 			color: white;
-			padding-bottom: 20px;
+			padding-bottom: 30px;
 			.usa{
 				text-transform: uppercase;
 			}
 		}
+		
 	}
 }
 .hero-description{
@@ -236,13 +263,16 @@ body {
 					text-transform: uppercase;
 					color: rgb(37, 34, 34);
 				}
+				a{
+					margin-bottom: 20px;
+				}
 			}
 			.boxes{
 				position: absolute;
 				bottom: -20px;
 				background-color: #ffffff;
 				width: 90%;
-				padding: 10px 20px;
+				padding: 20px 20px;
 				border: none;
 				z-index: 2;
 			}
@@ -289,6 +319,7 @@ body {
 .product-links{
 	margin-left: 2%;
 	margin-right: 2%;
+	margin-top: 20px;
 	ul{
 		display: flex;
 		li{
@@ -297,9 +328,9 @@ body {
 			a{
 				text-decoration: none;
 				text-transform: uppercase;
-				color: rgb(53, 53, 53);
+				color: rgb(93, 93, 93);
 				font-family:"Juventus Fans Bold";
-				font-size: 16px;
+				font-size: 18px;
 			}
 		}
 	}
@@ -445,7 +476,7 @@ body {
 				flex-direction: column;
 				width: 36%;
 				@include mixins.bp-large{
-					width: 50%;
+					width: 46%;
 
 				}
 			}
@@ -475,6 +506,97 @@ body {
 		}
 		img:hover{
 			transform: scale(1.1);
+		}
+	}
+}
+
+.category-title{
+	margin: 0px 2% 50px 2%;
+	position: relative;
+
+	h1{
+		font-size:30px ;
+		padding: 10px;
+		background-color: #f8f8f8;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	.product__bar{
+		.solid-line{
+			background-color: #63636393;
+			height: 1px;
+			width: 100%;
+		}
+	}
+}
+
+.product__home{
+	display: flex;
+	margin: 0px 2% 0px 2%;
+	margin-bottom: 40px;
+	
+	@include mixins.bp-large{
+		gap: 4%;
+	}
+	.product-container{
+		@include mixins.bp-large{
+			width: 40%;
+			border-right: 1px solid rgba(128, 128, 128, 0.656) ;
+		}
+		.category__links{
+			display: none;
+			width: 100%;
+			ul{
+				margin-right: 10%;
+				li{
+					border-bottom: 1px solid rgba(128, 128, 128, 0.623);
+					padding-bottom: 10px;
+					padding-top: 15px;
+					a{
+						text-decoration: none;
+						font-family: "Juventus Fans Bold";
+						color: black;
+						font-size: 18px;
+					}
+				}
+			}
+			@include mixins.bp-large{
+				display: block;
+				
+			}
+		}
+	}
+	.product__kits-container{
+		.category__large-links{
+			overflow: hidden;
+			.category-kits{
+				position: relative;
+				// overflow: hidden;
+				margin-bottom: 50px;
+				img{
+					width: 200%;
+					padding-right: 100px;
+					@include mixins.bp-large{
+						width: 150%;
+					}
+				}
+				.kit-description{
+					padding: 20px 20px;
+					background-color: white;
+					position: absolute;
+					left: 5%;
+					bottom: -20%;
+					width: 46%;
+					h2{
+						font-family:"Juventus Fans Bold";
+						font-size: 32px;
+						padding-bottom: 30px;
+					}
+					a{
+						margin-bottom: 20px;
+					}
+				}
+			}
 		}
 	}
 }
@@ -513,12 +635,19 @@ body {
 				border-bottom: 1px solid #636363;
 			}
 		}
+		.prefix{
+			label{
+				font-size: 14px;
+			}
+		}
 		.shop-now{
 			margin-top: 20px;
 			cursor: pointer;
 		}
 	}
 }
+
+
 
 footer{
 	background-color: black;
