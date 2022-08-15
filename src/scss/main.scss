@@ -25,6 +25,12 @@ background: variables.$primary-color;
 
 @use 'reset';
 @use 'mixins';
+
+@font-face {
+	font-family: "Juventus Fans Bold" , 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	src: url("../font/JuventusFansBold.ttf") format('truetype'),
+	;
+}
 // @import url(//db.onlinewebfonts.com/c/b4ccc98add6cc60de17dbb589dca2164?family=Juventus+Fans+Bold);
 // font-family: 'Roboto', sans-serif;
 
