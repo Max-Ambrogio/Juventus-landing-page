@@ -13,44 +13,27 @@
 	</head>
 
 	<body>
-        <header class="nav">
-            <div class="upper-nav">
-                <div class="hamburger">
-                    <div class="hamburger-bars">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                    </div>
-                    
-                    <ul class="links-hamburger">
-                        <li><a href="">Match Kits</a></li>
-                        <li><a href="">Training</a></li>
-                        <li><a href="">New In</a></li>
-                        <li><a href="">Apparel</a></li>
-                        <li><a href="">Accessories</a></li>
-                        <li><a href="">Gift Ideas</a></li>
-                        <li><a href="">Shop by Player</a></li>
-                        <li><a href="">Sale</a></li>
-                        <li><img src="" alt="shop-icon"></li>
-                    </ul>
-                </div>
-
-                <img class="logo" src="dist/img/logo-j.svg" alt="Juventus Logo">
-
-                <h1>Juventus Official Online Store</h1>
-            </div>
-
-            <ul class="links">
-                <li><a href="matchkits-options-page.html">Match Kits</a></li>
-                <li><a href="">Training</a></li>
-                <li><a href="">New In</a></li>
-                <li><a href="">Apparel</a></li>
-                <li><a href="">Accessories</a></li>
-                <li><a href="">Gift Ideas</a></li>
-                <li><a href="">Shop by Player</a></li>
-                <li><a href="">Sale</a></li>
-            </ul>
-
+        <header class="header">
+			<div class="logo">
+				<a href="index.html">
+					<img src="dist/img/logo-j.svg" alt="Juventus Logo">
+				</a>
+				<h1>Juventus Official Online Store</h1>
+			</div>
+			<nav class="navigation">
+				<input type="checkbox" class="toggle-menu">
+				<div class="hamburger"></div>
+				<ul class="menu">
+					<li><a href="matchkits-options-page.html">Match Kits</a></li>
+					<li><a href="#">Training</a></li>
+					<li><a href="#">New In</a></li>
+					<li><a href="#">Apparel</a></li>
+					<li><a href="#">Accessories</a></li>
+					<li><a href="#">Gift Ideas</a></li>
+					<li><a href="#">Shop by Player</a></li>
+					<li><a href="#">Sale</a></li>
+				</ul>
+			</nav>
 		</header>
 
         <div class="product-links">
@@ -85,6 +68,18 @@
                     <p>Model wears size <span class="uppercase">Medium</span></p>
                     <p>Height: 185 cm</p>
                 </div>
+                <div class="product__quantity">
+                    <h3>Quantity</h3>
+                    <select size="1" name="amount_0_0" class="quantitySelect" id="rg-quantity">
+                        <option aria-labelledby="rg-quantity" value="1">1</option>
+                        <option aria-labelledby="rg-quantity" value="2">2</option>
+                        <option aria-labelledby="rg-quantity" value="3">3</option>
+                        <option aria-labelledby="rg-quantity" value="4">4</option>
+                        <option aria-labelledby="rg-quantity" value="5">5</option>
+                        <option aria-labelledby="rg-quantity" value="6">6</option>
+                        <option aria-labelledby="rg-quantity" value="7">7</option>
+                    </select>
+                </div>
                 <div class="product__sizes">
                     <h2><span class="red-emphasis">Add the sponsor patches to your polo! </span> Select the option.</h2>
 
@@ -94,28 +89,16 @@
                             <a href="">Size chart</a>
                         </div>
                         <ul>
-                            <li><a href="">xs</a></li>
-                            <li><a href="">s</a></li>
-                            <li><a href="">m</a></li>
-                            <li><a href="">l</a></li>
-                            <li><a href="">xl</a></li>
-                            <li><a href="">xxl</a></li>
-                            <li><a href="">xxxl</a></li>
+                            <li><button>xs</button></li>
+                            <li><button>s</button></li>
+                            <li><button>m</button></li>
+                            <li><button>l</button></li>
+                            <li><button>xl</button></li>
+                            <li><button>xxl</button></li>
+                            <li><button>xxxl</button></li>
                         </ul>
                     </div>
                 </div>
-                    <div class="product__quantity">
-                        <h3>Quantity</h3>
-                        <select size="1" name="amount_0_0" class="quantitySelect" id="rg-quantity">
-                            <option aria-labelledby="rg-quantity" value="1">1</option>
-                            <option aria-labelledby="rg-quantity" value="2">2</option>
-                            <option aria-labelledby="rg-quantity" value="3">3</option>
-                            <option aria-labelledby="rg-quantity" value="4">4</option>
-                            <option aria-labelledby="rg-quantity" value="5">5</option>
-                            <option aria-labelledby="rg-quantity" value="6">6</option>
-                            <option aria-labelledby="rg-quantity" value="7">7</option>
-                        </select>
-                    </div>
                     <section class="product__price">
                         <h3>Total Price</h3>
                         <div class="price">
@@ -150,31 +133,31 @@
                     <!-- <p>Contact Us</p> -->
                     <div class="input prefix">
                         <legend>Prefix</legend>
-                        <input type="radio" id="Mr" value="Mr">
+                        <input type="radio" id="Mr" value="Mr" name="prefix">
                         <label for="Mr">Mr</label>
-                        <input type="radio" id="Mrs" value="Mrs">
+                        <input type="radio" id="Mrs" value="Mrs" name="prefix">
                         <label for="Mrs">Mrs</label>
-                        <input type="radio" id="N/A" value="N/A">
+                        <input type="radio" id="N/A" value="N/A" name="prefix">
                         <label for="N/A">N/A</label>
                     </div>
                     <div class="input first-name">
                         <label for="name-first">First Name</label>
-                        <input type="text" name="name-first" id="name">
+                        <input type="text" name="name-first" id="name" autocomplete="first name">
                     </div>
                     <div class="input last-name">
                         <label for="name-last">Last Name</label>
-                        <input type="text" name="name-last" id="name">
+                        <input type="text" name="name-last" id="name" autocomplete="last name">
                     </div>
                     <div class="input email">
-                        <label for="name">email</label>
-                        <input type="email" name="name" id="name">
+                        <label for="name">Email</label>
+                        <input type="email" name="name" id="email" autocomplete="email">
                     </div>
                     <div class="input phone">
                         <label for="phone">Phone Number</label>
 
                         <input type="tel" id="phone" name="phone"
                             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                            required placeholder="123-456-7890">
+                            required placeholder="123-456-7890" autocomplete="phone">
                     </div>
                     <input class="shop-now" type="submit" value="Submit Request">
                 </fieldset>
